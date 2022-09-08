@@ -5,7 +5,7 @@
  *
  * Description: this program prints the sizeof each data type
  *
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
