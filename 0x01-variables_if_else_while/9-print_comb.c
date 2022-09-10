@@ -8,13 +8,21 @@
 
 int main(void)
 {
-	int num;
-	
-	for (num = 0; num < 10; num++)
+	int number;
+
+	/*for 0-9 with (,)*/
+	for (number = 48; number <= 57; number++)
 	{
-		putchar(num);
+		putchar(number);
+
+		/*if the value is 9 in format ASCII break the program*/
+		if (number == 57)
+		{
+			break;
+		}
+
 		putchar(',');
-		putchar(' ');
+		putchar (' ');
 	}
 	putchar('\n');
 
