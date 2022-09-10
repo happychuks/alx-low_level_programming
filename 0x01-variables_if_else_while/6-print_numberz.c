@@ -10,7 +10,7 @@ int main(void)
 {
 	int n;
 
-	for (n = 0; n < 10; n++)
+	for (n = 48; n <= 57; n++) /* the ascii representation of number 0-9 is 48-57 */
 	{
 		putchar(n);
 	}
