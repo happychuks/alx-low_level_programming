@@ -8,13 +8,15 @@
 
 int main(void)
 {
-	char alp_lower[26] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	char alp_lower;
+	
 
-	for (i = 0; i < 26; i++)
+	for (alp_lower = 'a'; alp_lower < 'z'; alp_lower++)
 	{
-		putchar(alp_lower[i]);
+		putchar(alp_lower);
 	}
+
 	putchar('\n');
+
 	return (0);
 }
