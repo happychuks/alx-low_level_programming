@@ -8,15 +8,15 @@
 int main(void)
 
 {
-	char letter; 
+	char letter;
 
 	/*for z-a*/
-	for (letter = 122 ; letter >= 97; letter--) /* using ASCII representation of letters*/
+	for (letter = 122 ; letter >= 97; letter--) /* using ASCII representation*/
 	{
 		putchar(letter);
 	}
 
-	putchar('\n'); 
+	putchar('\n');
 
 	return (0);
 
