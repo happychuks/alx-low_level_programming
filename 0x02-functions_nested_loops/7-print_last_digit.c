@@ -3,7 +3,7 @@
 /**
  * print_last_digit - prints the last digit of a number
  * @n: this is an input interger
- * @48: this is teh ascii representation of number 0
+ * @48: this is teh ascii repres of num 0
  * Return: Returns the value of the last digit
  */
 
