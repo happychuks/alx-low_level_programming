@@ -1,22 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - Prints alphabet in lowercase using for loop and putchar function.
- *
+ * main - prints the alphabet in lowercase,
+ * followed by a new line
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char alp_lower;
-	
+	char ch;
 
-	for (alp_lower = 'a'; alp_lower <= 'z'; alp_lower++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(alp_lower);
+		putchar(ch);
 	}
-
 	putchar('\n');
-
 	return (0);
 }
