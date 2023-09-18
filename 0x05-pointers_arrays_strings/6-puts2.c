@@ -6,7 +6,7 @@
  * Description: Print first char then third, then fifth...
  */
 
-void puts(char *str)
+void puts2(char *str)
 {
 	int i;
 
