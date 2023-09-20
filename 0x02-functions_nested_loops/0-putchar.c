@@ -11,9 +11,10 @@ int main(void)
 	int i;
 	char p[] = "_putchar";
 
-	for (i = 0; i < p[i] != '\0'; i++)
+	while (p[i] != '\0')
 	{
 		_putchar(p[i]);
+		i++;
 	}
 
 	_putchar('\n');
