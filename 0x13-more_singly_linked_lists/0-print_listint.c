@@ -1,4 +1,4 @@
-#include "lists.h>"
+#include "lists.h"
 
 /**
  * print_listint - prints all teh elements of a lisstint_t list
@@ -16,5 +16,5 @@ size_t print_listint(const listint_t *h)
 		h = h->next;
 		count++;
 	}
-	return count;
+	return (count);
 }
