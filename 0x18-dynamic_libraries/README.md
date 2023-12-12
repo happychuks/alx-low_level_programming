@@ -76,4 +76,11 @@ The -shared flag specifies that you are creating a shared library.
 ```
 Now, you should have a dynamic library named libdynamic.so containing the functions from your source code. You can use this library in other programs by linking against it.
 
-
+# Task 1. Without libraries what have we? We have no past and no future
+Create a script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
+File: ```c 1-create_dynamic_lib.sh```
+```bash
+#!/bin/bash
+gcc -c -fPIC ./*.c (This compiles  the source code into an object file)
+gcc -shared -o liball.so ./*.o (This create the dynamic library by linking the object file into a shared library.)
+```
