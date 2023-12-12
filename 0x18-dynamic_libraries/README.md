@@ -84,3 +84,14 @@ File: ```c 1-create_dynamic_lib.sh```
 gcc -c -fPIC ./*.c (This compiles  the source code into an object file)
 gcc -shared -o liball.so ./*.o (This create the dynamic library by linking the object file into a shared library.)
 ```
+
+# Task 2. Let's call C functions from Python
+I know, you’re missing C when coding in Python. So let’s fix that!
+Create a dynamic library that contains C functions that can be called from Python. See example for more detail.
+Step 1: create a c file with all the necessary functions: ```c maths_operations.c ``` 
+Step 2: compile the source code with the maths functions using ```bash gcc -c -fPIC maths_operations.c ```
+Step 3: create the shared library by linking to the object file generated using ```bash gcc -shared -0 100_operations.so maths_operations.o ```
+Test the dynamic library ```c 100-operations.so ``` library using this python file 100-tests.py
+```bash
+python3 100-tests.py
+```
