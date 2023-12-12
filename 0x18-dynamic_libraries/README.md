@@ -22,14 +22,58 @@ Dynamic libraries are typically created by compiling source code into a shared o
 
 ```bash
 gcc -shared -o mylib.so mylib.c
+```
 
 # Linking with Dynamic Libraries
 To use a dynamic library in a C program, you need to link against it during compilation. The -l flag is used to specify the library name without the lib prefix and the file extension.
 
 ```bash
 gcc -o myprogram myprogram.c -lmylib
+```
 
 # Loading at Runtime
 Dynamic libraries are loaded into memory at runtime using functions provided by the operating system, such as dlopen() on Unix-like systems. Functionality within the library can then be accessed through function pointers or dynamically linked symbols.
 
 Dynamic libraries play a crucial role in the development of large-scale software projects by facilitating code organization, reuse, and maintenance. They provide a flexible and efficient means of sharing code among different applications, contributing to the principles of modular and extensible software design.
+
+# Task 0. A library is not a luxury but one of the necessities of life
+The steps to create a dynamic library involve writing the source code for your functions, compiling them into an object file, and then linking them into a shared library.
+## To Create the dynamic library libdynamic.so containing all the functions listed below:
+```c
+int _putchar(char c);
+int _islower(int c);
+int _isalpha(int c);
+int _abs(int n);
+int _isupper(int c);
+int _isdigit(int c);
+int _strlen(char *s);
+void _puts(char *s);
+char *_strcpy(char *dest, char *src);
+int _atoi(char *s);
+char *_strcat(char *dest, char *src);
+char *_strncat(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n);
+int _strcmp(char *s1, char *s2);
+char *_memset(char *s, char b, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
+char *_strchr(char *s, char c);
+unsigned int _strspn(char *s, char *accept);
+char *_strpbrk(char *s, char *accept);
+char *_strstr(char *haystack, char *needle);
+```
+Step 1: Write the source code for your functions with file extenstion .c 
+Step 2: Compile the source code into an object file: Use a compiler to create an object file from your source code.
+
+```bash 
+gcc -c -fPIC *.c
+```
+The -fPIC flag stands for Position Independent Code, which is necessary for creating shared libraries.
+
+Step 3: Create the dynamic library: Link the object file into a shared library.
+```bash
+gcc -shared -o libdynamic.so *.o
+The -shared flag specifies that you are creating a shared library.
+```
+Now, you should have a dynamic library named libdynamic.so containing the functions from your source code. You can use this library in other programs by linking against it.
+
+
