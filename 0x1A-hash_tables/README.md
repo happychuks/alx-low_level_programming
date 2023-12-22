@@ -1,3 +1,4 @@
+![How_Hashing_Works](./hashing.png)
 # Hash Table
 A **hash table** is a powerful data structure that facilitates efficient storage and retrieval of key-value pairs. It boasts constant-time average complexity for fundamental operations like insertion, deletion, and lookup.
 
